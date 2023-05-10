@@ -19,6 +19,7 @@ fn main() {
     // total bloom filter size
     
     for expected_num_items in [1000, 5000, 10000, 50000]{
+    // for expected_num_items in [100, 500]{
         println!("----------------------");
         println!("expected_num_items {}", expected_num_items);
         println!("----------------------");
@@ -61,7 +62,7 @@ fn main() {
         for keys_new in all_keys.iter(){
             // time querying
             let now = Instant::now();
-            let results = query_mphf(keys_new, &phf);
+            let results = query_mphf(keys_new, &phf, &expected_num_items);
             let duration: Duration = now.elapsed();
             println!("false positive: {} false negative: {}", results.0 as f64 /expected_num_items as f64, results.1 as f64 /expected_num_items as f64);
             println!("mphf query {:?}", duration);
@@ -80,7 +81,7 @@ fn main() {
         for keys_new in all_keys.iter(){
             // tim querying
             let now = Instant::now();
-            let results = query_fpt(keys_new, &fingerprint, &phf, &hash_builder, &b);
+            let results = query_fpt(keys_new, &fingerprint, &phf, &hash_builder, &b, &expected_num_items);
             let duration: Duration = now.elapsed();
             println!("false positive: {} false negative: {}", results.0 as f64 /expected_num_items as f64, results.1 as f64 /expected_num_items as f64);
             println!("fpt array query {:?}", duration);
