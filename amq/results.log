@@ -1,0 +1,132 @@
+----------------------
+expected_num_items 1000
+----------------------
+testing bloom filter
+fpr 7, bloom filter size in bytes 184 
+false positive: 0.007 false negative: 0
+771.6µs
+false positive: 0.001 false negative: 0
+796.4µs
+false positive: 0.004 false negative: 0
+774.2µs
+fpr 8, bloom filter size in bytes 184 
+false positive: 0.011 false negative: 0
+618.5µs
+false positive: 0.01 false negative: 0
+867.4µs
+false positive: 0.005 false negative: 0
+764.8µs
+fpr 10, bloom filter size in bytes 184 
+false positive: 0.003 false negative: 0
+614.9µs
+false positive: 0 false negative: 0
+845.2µs
+false positive: 0 false negative: 0
+715µs
+**********
+testing mpfh
+mphf size: 32
+false positive: 0.715 false negative: 0
+mphf query 1.0428ms
+false positive: 0.604 false negative: 0
+mphf query 1.4529ms
+false positive: 0.382 false negative: 0
+mphf query 1.0597ms
+**********
+testing fingerprint array
+fpt size 24
+false positive: 0.003 false negative: 0
+fpt array query 1.7424ms
+false positive: 0.003 false negative: 0
+fpt array query 1.8637ms
+false positive: 0.004 false negative: 0
+fpt array query 1.4789ms
+----------------------
+expected_num_items 5000
+----------------------
+testing bloom filter
+fpr 7, bloom filter size in bytes 184 
+false positive: 0.0164 false negative: 0
+2.8511ms
+false positive: 0.0122 false negative: 0
+3.2946ms
+false positive: 0.0092 false negative: 0
+3.4413ms
+fpr 8, bloom filter size in bytes 184 
+false positive: 0.0094 false negative: 0
+2.8325ms
+false positive: 0.0108 false negative: 0
+2.9021ms
+false positive: 0.0062 false negative: 0
+3.7485ms
+fpr 10, bloom filter size in bytes 184 
+false positive: 0.0002 false negative: 0
+2.9689ms
+false positive: 0.0004 false negative: 0
+2.9958ms
+false positive: 0.0006 false negative: 0
+3.9663ms
+**********
+testing mpfh
+mphf size: 32
+false positive: 0.8184 false negative: 0
+mphf query 5.2632ms
+false positive: 0.6816 false negative: 0
+mphf query 5.3946ms
+false positive: 0.4548 false negative: 0
+mphf query 4.6482ms
+**********
+testing fingerprint array
+fpt size 24
+false positive: 0.0068 false negative: 0
+fpt array query 9.4806ms
+false positive: 0.0042 false negative: 0
+fpt array query 7.7479ms
+false positive: 0.0044 false negative: 0
+fpt array query 7.0668ms
+----------------------
+expected_num_items 10000
+----------------------
+testing bloom filter
+fpr 7, bloom filter size in bytes 184 
+false positive: 0.0077 false negative: 0
+5.2699ms
+false positive: 0.0064 false negative: 0
+5.526ms
+false positive: 0.0045 false negative: 0
+6.2459ms
+fpr 8, bloom filter size in bytes 184 
+false positive: 0.0142 false negative: 0
+5.1994ms
+false positive: 0.0131 false negative: 0
+5.7715ms
+false positive: 0.0075 false negative: 0
+6.132ms
+fpr 10, bloom filter size in bytes 184 
+false positive: 0.0032 false negative: 0
+5.2731ms
+false positive: 0.0032 false negative: 0
+5.8338ms
+false positive: 0.002 false negative: 0
+7.2711ms
+**********
+testing mpfh
+mphf size: 32
+false positive: 0.8426 false negative: 0
+mphf query 10.0167ms
+false positive: 0.7 false negative: 0
+mphf query 9.5017ms
+false positive: 0.4674 false negative: 0
+mphf query 9.9052ms
+**********
+testing fingerprint array
+fpt size 24
+false positive: 0.0073 false negative: 0
+fpt array query 14.7839ms
+false positive: 0.0053 false negative: 0
+fpt array query 14.5019ms
+false positive: 0.0031 false negative: 0
+fpt array query 13.8804ms
+----------------------
+expected_num_items 50000
+----------------------
