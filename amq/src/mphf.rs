@@ -53,7 +53,7 @@ pub fn query_fpt(keys_new: &(Vec<String>, Vec<String>), fingerprint: &Vec<i32>, 
         let mpfh_tmp =  phf.try_hash(s);
         if mpfh_tmp!=None{
             let mpfh_val = mpfh_tmp.unwrap();
-            if mpfh_val < *expected_num_items as u64{
+            if mpfh_val >= *expected_num_items as u64{
                 fng+=1;
             } else if fingerprint[mpfh_val as usize] != get_bbits(&hash_builder, s, &b) {
                 fng+=1;

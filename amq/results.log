@@ -4,129 +4,169 @@ expected_num_items 1000
 testing bloom filter
 fpr 7, bloom filter size in bytes 184 
 false positive: 0.007 false negative: 0
-771.6µs
-false positive: 0.001 false negative: 0
-796.4µs
-false positive: 0.004 false negative: 0
-774.2µs
-fpr 8, bloom filter size in bytes 184 
-false positive: 0.011 false negative: 0
-618.5µs
-false positive: 0.01 false negative: 0
-867.4µs
-false positive: 0.005 false negative: 0
-764.8µs
-fpr 10, bloom filter size in bytes 184 
+80.6µs
+false positive: 0.009 false negative: 0
+105.6µs
 false positive: 0.003 false negative: 0
-614.9µs
-false positive: 0 false negative: 0
-845.2µs
-false positive: 0 false negative: 0
-715µs
+93.2µs
+fpr 8, bloom filter size in bytes 184 
+false positive: 0.002 false negative: 0
+79.3µs
+false positive: 0.007 false negative: 0
+85.8µs
+false positive: 0.005 false negative: 0
+165.2µs
+fpr 10, bloom filter size in bytes 184 
+false positive: 0.001 false negative: 0
+81.2µs
+false positive: 0.001 false negative: 0
+126.8µs
+false positive: 0.001 false negative: 0
+173µs
 **********
 testing mpfh
 mphf size: 32
-false positive: 0.715 false negative: 0
-mphf query 1.0428ms
-false positive: 0.604 false negative: 0
-mphf query 1.4529ms
-false positive: 0.382 false negative: 0
-mphf query 1.0597ms
+false positive: 0.693 false negative: 0
+mphf query 59.6µs
+false positive: 0.615 false negative: 0
+mphf query 97.5µs
+false positive: 0.394 false negative: 0
+mphf query 73.3µs
 **********
 testing fingerprint array
 fpt size 24
 false positive: 0.003 false negative: 0
-fpt array query 1.7424ms
-false positive: 0.003 false negative: 0
-fpt array query 1.8637ms
-false positive: 0.004 false negative: 0
-fpt array query 1.4789ms
+fpt array query 149.5µs
+false positive: 0.009 false negative: 0
+fpt array query 226.7µs
+false positive: 0.002 false negative: 0
+fpt array query 155.5µs
 ----------------------
 expected_num_items 5000
 ----------------------
 testing bloom filter
 fpr 7, bloom filter size in bytes 184 
-false positive: 0.0164 false negative: 0
-2.8511ms
-false positive: 0.0122 false negative: 0
-3.2946ms
-false positive: 0.0092 false negative: 0
-3.4413ms
-fpr 8, bloom filter size in bytes 184 
+false positive: 0.0138 false negative: 0
+576µs
 false positive: 0.0094 false negative: 0
-2.8325ms
-false positive: 0.0108 false negative: 0
-2.9021ms
-false positive: 0.0062 false negative: 0
-3.7485ms
+579.5µs
+false positive: 0.0076 false negative: 0
+719.2µs
+fpr 8, bloom filter size in bytes 184 
+false positive: 0.0096 false negative: 0
+456.7µs
+false positive: 0.0106 false negative: 0
+435.5µs
+false positive: 0.0066 false negative: 0
+484.4µs
 fpr 10, bloom filter size in bytes 184 
-false positive: 0.0002 false negative: 0
-2.9689ms
-false positive: 0.0004 false negative: 0
-2.9958ms
 false positive: 0.0006 false negative: 0
-3.9663ms
+411µs
+false positive: 0.0004 false negative: 0
+460.5µs
+false positive: 0.0006 false negative: 0
+530µs
 **********
 testing mpfh
 mphf size: 32
-false positive: 0.8184 false negative: 0
-mphf query 5.2632ms
-false positive: 0.6816 false negative: 0
-mphf query 5.3946ms
-false positive: 0.4548 false negative: 0
-mphf query 4.6482ms
+false positive: 0.8156 false negative: 0
+mphf query 297µs
+false positive: 0.6794 false negative: 0
+mphf query 283.7µs
+false positive: 0.4492 false negative: 0
+mphf query 266.4µs
 **********
 testing fingerprint array
 fpt size 24
-false positive: 0.0068 false negative: 0
-fpt array query 9.4806ms
-false positive: 0.0042 false negative: 0
-fpt array query 7.7479ms
+false positive: 0.0072 false negative: 0
+fpt array query 844.1µs
+false positive: 0.0048 false negative: 0
+fpt array query 839.5µs
 false positive: 0.0044 false negative: 0
-fpt array query 7.0668ms
+fpt array query 847.7µs
 ----------------------
 expected_num_items 10000
 ----------------------
 testing bloom filter
 fpr 7, bloom filter size in bytes 184 
-false positive: 0.0077 false negative: 0
-5.2699ms
-false positive: 0.0064 false negative: 0
-5.526ms
-false positive: 0.0045 false negative: 0
-6.2459ms
+false positive: 0.008 false negative: 0
+859.2µs
+false positive: 0.0051 false negative: 0
+914.9µs
+false positive: 0.0032 false negative: 0
+1.0055ms
 fpr 8, bloom filter size in bytes 184 
-false positive: 0.0142 false negative: 0
-5.1994ms
-false positive: 0.0131 false negative: 0
-5.7715ms
-false positive: 0.0075 false negative: 0
-6.132ms
+false positive: 0.0146 false negative: 0
+860.9µs
+false positive: 0.0116 false negative: 0
+928.8µs
+false positive: 0.009 false negative: 0
+1.0586ms
 fpr 10, bloom filter size in bytes 184 
-false positive: 0.0032 false negative: 0
-5.2731ms
-false positive: 0.0032 false negative: 0
-5.8338ms
-false positive: 0.002 false negative: 0
-7.2711ms
+false positive: 0.003 false negative: 0
+874.6µs
+false positive: 0.0016 false negative: 0
+969.7µs
+false positive: 0.0021 false negative: 0
+1.1093ms
 **********
 testing mpfh
 mphf size: 32
-false positive: 0.8426 false negative: 0
-mphf query 10.0167ms
-false positive: 0.7 false negative: 0
-mphf query 9.5017ms
-false positive: 0.4674 false negative: 0
-mphf query 9.9052ms
+false positive: 0.8435 false negative: 0
+mphf query 662µs
+false positive: 0.6967 false negative: 0
+mphf query 594.2µs
+false positive: 0.4675 false negative: 0
+mphf query 1.079ms
 **********
 testing fingerprint array
 fpt size 24
-false positive: 0.0073 false negative: 0
-fpt array query 14.7839ms
-false positive: 0.0053 false negative: 0
-fpt array query 14.5019ms
-false positive: 0.0031 false negative: 0
-fpt array query 13.8804ms
+false positive: 0.0082 false negative: 0
+fpt array query 1.9894ms
+false positive: 0.0059 false negative: 0
+fpt array query 2.3655ms
+false positive: 0.0042 false negative: 0
+fpt array query 1.8235ms
 ----------------------
 expected_num_items 50000
 ----------------------
+testing bloom filter
+fpr 7, bloom filter size in bytes 184 
+false positive: 0.00696 false negative: 0
+4.8252ms
+false positive: 0.00556 false negative: 0
+7.32ms
+false positive: 0.00374 false negative: 0
+5.2123ms
+fpr 8, bloom filter size in bytes 184 
+false positive: 0.00802 false negative: 0
+4.1816ms
+false positive: 0.00654 false negative: 0
+4.4418ms
+false positive: 0.00464 false negative: 0
+4.7692ms
+fpr 10, bloom filter size in bytes 184 
+false positive: 0.0061 false negative: 0
+4.2222ms
+false positive: 0.00542 false negative: 0
+4.8104ms
+false positive: 0.00316 false negative: 0
+5.6035ms
+**********
+testing mpfh
+mphf size: 32
+false positive: 0.87264 false negative: 0
+mphf query 3.4048ms
+false positive: 0.72782 false negative: 0
+mphf query 3.5219ms
+false positive: 0.4838 false negative: 0
+mphf query 3.1885ms
+**********
+testing fingerprint array
+fpt size 24
+false positive: 0.00804 false negative: 0
+fpt array query 9.3716ms
+false positive: 0.00578 false negative: 0
+fpt array query 8.9538ms
+false positive: 0.00362 false negative: 0
+fpt array query 9.1017ms
