@@ -71,20 +71,22 @@ fn main() {
         // test fingerprint array
         println!("**********");
         println!("testing fingerprint array");
-        let b: usize = 7; //  8 or 10
-        let hash_builder = RandomState::with_seed(42);
-        // create integer vector where i = Mphf(k) and A[i]=h(k)'s first b bits
-        let fingerprint = create_fpt(&phf, &hash_builder, &keys, &b);
-        // size of array
-        println!("fpt size {}", mem::size_of_val(&fingerprint));
-    
-        for keys_new in all_keys.iter(){
-            // tim querying
-            let now = Instant::now();
-            let results = query_fpt(keys_new, &fingerprint, &phf, &hash_builder, &b, &expected_num_items);
-            let duration: Duration = now.elapsed();
-            println!("false positive: {} false negative: {}", results.0 as f64 /expected_num_items as f64, results.1 as f64 /expected_num_items as f64);
-            println!("fpt array query {:?}", duration);
+        for b in [7,8,10]{
+            println!("last {b}");
+            let hash_builder = RandomState::with_seed(42);
+            // create integer vector where i = Mphf(k) and A[i]=h(k)'s first b bits
+            let fingerprint = create_fpt(&phf, &hash_builder, &keys, &b);
+            // size of array
+            println!("fpt size {}", mem::size_of_val(&fingerprint));
+            for keys_new in all_keys.iter(){
+                // tim querying
+                let now = Instant::now();
+                let results = query_fpt(keys_new, &fingerprint, &phf, &hash_builder, &b, &expected_num_items);
+                let duration: Duration = now.elapsed();
+                println!("false positive: {} false negative: {}", results.0 as f64 /expected_num_items as f64, results.1 as f64 /expected_num_items as f64);
+                println!("fpt array query {:?}", duration);
+            }
         }
+        
     }
 }
