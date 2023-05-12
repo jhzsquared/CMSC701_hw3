@@ -3,6 +3,7 @@ use std::time::{Instant,Duration};
 use boomphf::*;
 use ahash::RandomState;
 
+
 // from src/
 mod bloom_wrap;
 mod mphf;
@@ -39,7 +40,7 @@ fn main() {
             let filter = make_filter(keys.clone(), expected_num_items, false_positive_rate);     
             let filter_size =  mem::size_of_val(&filter);  //return size in bytes
             println!("fpr {}, bloom filter size in bytes {} ", fpr, filter_size);
-            
+            println!( "redo bloom filter size in bits {}", filter.num_bits());
             // iterate through various mix of pos/neg k' and test fpr, fng, and time
             for keys_new in all_keys.iter(){
                 // time querying
@@ -58,6 +59,7 @@ fn main() {
         println!("**********");
         println!("testing mpfh");
         println!("mphf size: {}", mphf_size);
+    
         // iterate through various mix of pos/neg k' and test fpr, fng, and time
         for keys_new in all_keys.iter(){
             // time querying
@@ -78,6 +80,9 @@ fn main() {
             let fingerprint = create_fpt(&phf, &hash_builder, &keys, &b);
             // size of array
             println!("fpt size {}", mem::size_of_val(&fingerprint));
+            // actual size of fingerprint
+            let fptsize = std::mem::size_of::<Vec<i32>>() + fingerprint.capacity() * std::mem::size_of::<i32>();
+            println!("fpt size {}", fptsize);
             for keys_new in all_keys.iter(){
                 // tim querying
                 let now = Instant::now();

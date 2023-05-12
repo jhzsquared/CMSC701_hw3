@@ -69,3 +69,4 @@ fn get_bbits(hash_builder:&RandomState, key:&String, b:&usize) -> i32{
     let binval = format!("{:b}", hash_val).to_string();
     return binval[binval.len()-b..].to_string().parse::<i32>().unwrap(); 
 }
+
